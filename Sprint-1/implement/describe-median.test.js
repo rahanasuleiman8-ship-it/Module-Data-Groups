@@ -28,25 +28,22 @@ describe("describeMedian", () => {
     expect(describeMedian([1, 2, 3])).toEqual("The median is 2");
   });
 
+  // Given an empty array
+  // When passed to describeMedian
+  // Then it should return "Could not calculate a median: calculateMedian requires a non-empty array"
+
   it("given an empty array, returns the correct error message", () => {
     expect(describeMedian([])).toEqual(
       "Could not calculate a median: calculateMedian requires a non-empty array"
     );
   });
+
+  // Given something that isn't an array of numbers, e.g. "banana"
+  // When passed to describeMedian
+  // Then it should return "Could not calculate a median: calculateMedian requires an array of numbers"
+  it("given something that isn't an array, returns the correct error message", () => {
+    expect(describeMedian("banana")).toEqual(
+      "Could not calculate a median: calculateMedian requires an array of numbers"
+    );
+  });
 });
-
-
-// Given an empty array
-// When passed to describeMedian
-// Then it should return "Could not calculate a median: calculateMedian requires a non-empty array"
-
-// Given something that isn't an array of numbers, e.g. "banana"
-// When passed to describeMedian
-// Then it should return "Could not calculate a median: calculateMedian requires an array of numbers"
-test.todo('given [1, 2, 3], returns "The median is 2"');
-
-describe("describeMedian", () => {
-  it("given something is not an array, returns Could not calculate a median : calculateMedian requires an array of numbers", () => {
-    expect(describeMedian([])).toEqual("calculateMedian requires an array of numbers");
-  })
-})
