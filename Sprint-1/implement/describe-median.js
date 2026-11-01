@@ -24,7 +24,7 @@ function describeMedian(list) {
   try {
     const median = calculateMedian(list);
     return `The median is ${median}`;
-  } catch {
+  } catch(error) {
     return `Could not calculate a median: ${error.message}`;
   }
 }
