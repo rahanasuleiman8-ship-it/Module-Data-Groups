@@ -18,6 +18,7 @@ E.g. dedupe([1, 2, 1]) returns [1, 2]
 // Then it should return an empty array
 test.todo("given an empty array, it returns an empty array");
 
+
 // Given an array with no duplicates
 // When passed to the dedupe function
 // Then it should return a copy of the original array
