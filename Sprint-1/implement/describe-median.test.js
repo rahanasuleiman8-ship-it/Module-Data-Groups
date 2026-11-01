@@ -26,21 +26,19 @@ test.todo('given [1, 2, 3], returns "The median is 2"');
 describe("describeMedian", () => {
   it("given [1, 2, 3], returns {The median is 2}", () => {
     expect(describeMedian([1, 2, 3])).toEqual("The median is 2");
-  })
-})
+  });
+
+  it("given an empty array, returns the correct error message", () => {
+    expect(describeMedian([])).toEqual(
+      "Could not calculate a median: calculateMedian requires a non-empty array"
+    );
+  });
+});
 
 
 // Given an empty array
 // When passed to describeMedian
 // Then it should return "Could not calculate a median: calculateMedian requires a non-empty array"
-
-test.todo('given [1, 2, 3], returns "The median is 2"');
-
-describe("describeMedian", () => {
-  it("given [], returns Could not calculate a median : calculateMedian requires a non-empty array", () => {
-    expect(describeMedian([])).toEqual("calculateMedian requires a non-empty array");
-  })
-})
 
 // Given something that isn't an array of numbers, e.g. "banana"
 // When passed to describeMedian
