@@ -1,6 +1,6 @@
 function parseQueryString(queryString) {
   const queryParams = {};
-  if (!queryString || queryString.length === 0) {
+  if (!queryString) {
     return queryParams;
   }
 
@@ -33,7 +33,7 @@ function parseQueryString(queryString) {
     const value = decode(rawValue);
 
     // Handle duplicate keys by storing multiple values in an array
-    if (Object.prototype.hasOwnProperty.call(queryParams, key)) {
+    if (Object.hasOwn(queryParams, key)) {
       if (Array.isArray(queryParams[key])) {
         queryParams[key].push(value);
       } else {
